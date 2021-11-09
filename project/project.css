@@ -1,0 +1,54 @@
+input[type=range] {  /* Code Starting here from https://stackoverflow.com/questions/41170867/html5-sliders-disappear-under-chromes-device-mode */
+  -webkit-appearance: none;
+  background: transparent;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+background: #fff;
+height: 18px;
+width: 18px;
+margin-top: -8px;
+border-radius: 99px;
+}
+input[type=range]::-webkit-slider-runnable-track {
+width: 300px;
+height: 4px;
+background: #ddd;
+} /*Ending Here*/
+
+
+
+body{ /*Setting up standardized style of all pages*/
+
+  background-color:grey;
+  text-align: center;
+  align-content:center;
+  font-size:40pt;
+  color: white;
+  width: 100%;
+  max-width:95%;
+  height: 100%;
+  display:inline-block;
+}
+
+
+#status-data{
+  font-size: 30pt;
+}
+#min-speed-slider-container{
+  font-size: 20pt;
+}
+
+#min-dist-slider-container{
+  font-size: 20pt;
+}
+
+button{
+  margin-top: 30px;
+  font-size:40pt;
+  background-color: white;
+}
+
+.slider{
+  width:75%;
+}
