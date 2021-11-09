@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<title>
+  Garage Door Opener Login
+</title>
+    <link rel="stylesheet" href="css/project.css">
+<body>
+  <div id = "connect-page">
+    <div id = "status">
+      <span id = "status-title"> Current Status: </span>
+      <span id = "status-data"> DISCONNECTED </span>
+    </div>
+    <div id = "button-connect-main-container">
+      <button id= "button-connect-main"> Connect </button>
+    </div>
+  </div>
+  <div id = "main-page"> <!-- Main Page -->
+    <div id = "accel">
+      <span id = "accel-title"> Speed: </span> <!-- Speed -->
+      <span id = "accel-data"> 0 </span> inches/sec
+    </div>
+    <div id = "pos">
+      <span id = "pos-title"> Nearest Object: </span> <!-- Object Distances -->
+      <span id = "pos-data">  0 </span> ft
+    </div>
+    <div id = "dist">
+      <span id = "dist-title"> Distance from object: </span> <!-- Object Distances (s) -->
+      <span id = "dist-data">  0 </span> s
+    </div>
+    <button id = "button-main-advanced"> Advanced </button>   <!-- Advanced button -->
+    <button id = "button-main-connect"> Connection </button>
+  </div>
+  <div id = "advanced-page">
+    <div id="min-dist-container"> <!-- Text Formatting Container -->
+      <span id= "min-dist-title"> Minimum Distance: </span>
+      <span class = "data-advanced" id=min-dist-data>5</span>s
+    </div>
+    <div id="min-dist-slider-container">
+
+      <label id="min-dist-slider-label" for="mindistslider">
+        <input type="range" min="1" max="15" value="5" class="slider" id="mindistslider"> <!-- Slider for Minimum Distance -->
+      </label>
+
+    </div>
+    <div id="min-speed-slider"> <!-- Text Formatting Container for Brightness -->
+      <span id= "min-speed-title"> Minimum Speed: </span>
+      <span class = "data-advanced" id=min-speed-data>2</span> inches/second
+    </div>
+    <div id="min-speed-slider-container">
+
+    <label id="min-speed-slider-label" for="minspeedslider">
+      <input type="range" min="0" max="20" value="2" class="slider" id="minspeedslider"> <!-- Slider for Speed  -->
+    </label>
+
+    </div>
+    <button id = "button-advanced-main">Status</button>
+    <button id ="button-advanced-info">Information</button>
+  </div>
+  <div id = "info-page">
+    <button id ="button-info-advanced">Advanced</button>
+    <div id = "info">
+      <div>Minimum Distance: The Distance (measured in seconds) from another person, bike, or object at which you want the bell to be rung. </div>
+      <div>Minimum Speed: The minimum Speed (meeasured in inches/second) at which you want the bell to be rung. If the sensor is moving at a speed below this, the alarm will not be rung. </div>
+      <div>Note: It is recommended that you set the minimum speed to at least 3 seconds or higher. </div>
+    </div>
+    </div>
+  </div>
+</body>
+<script src="/resources/particle/particle.min.js"></script>
+<script src="js/project.js"></script>
+<script src="js/projectApp.js"></script>
